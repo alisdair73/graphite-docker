@@ -4,7 +4,8 @@ FROM ubuntu
 
 # Install all prerequisites
 RUN apt-get -y update
-RUN apt-get install python-pip gunicorn supervisor nginx-light
+RUN apt-get -y install python-pip python-pip python-cairo python-django python-django-tagging python-twisted 
+RUN apt-get -y gunicorn supervisor nginx-light
 RUN pip install https://github.com/graphite-project/ceres/tarball/master
 RUN pip install whisper
 RUN pip install carbon
